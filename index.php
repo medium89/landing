@@ -1,16 +1,6 @@
 <html lang="en">
   <head>
 
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/css/intlTelInput.css" integrity="sha512-1fzvDP5eqhbc1j8H77kf7tBpz+lRlD+vTOuXz/A58/HcBUyH4BaJeo+xSyhE0Mo1V8JRSnAg5smJhkZo93EZOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.10.58/libphonenumber-js.min.js" integrity="sha512-j/BCk7lV3GHPfc7h2AUpe+LJmqC2yypehBlLa6QOepHBpZfcb0qRm+o8A8M0BqG7WGwOhZpdPbQdhLb3TBDOdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <?php include '../api/integration/php_var_int.php'; ?>
-  <?php include '../api/integration/pixel.php'; ?>
-  <script>php_var = [];</script>
-
-
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>
    Fans advocate for Miriama Kamo’s release after controversial interview
@@ -25,6 +15,13 @@
   <link rel="stylesheet" href="css/land.css">
   <link rel="stylesheet" href="css/main.css">
   
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/css/intlTelInput.css" integrity="sha512-1fzvDP5eqhbc1j8H77kf7tBpz+lRlD+vTOuXz/A58/HcBUyH4BaJeo+xSyhE0Mo1V8JRSnAg5smJhkZo93EZOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.10.58/libphonenumber-js.min.js" integrity="sha512-j/BCk7lV3GHPfc7h2AUpe+LJmqC2yypehBlLa6QOepHBpZfcb0qRm+o8A8M0BqG7WGwOhZpdPbQdhLb3TBDOdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <?php include '../api/integration/php_var_int.php'; ?>
+  <?php include '../api/integration/pixel.php'; ?>
+  <script>php_var = [];</script>
 
 </head>
  <body>
@@ -691,9 +688,9 @@
 
 
        <div class="form-container">
-        <form action="">
-            <input type="text" name="name" placeholder="Имя" id="name" required>
-            <input type="text" name="lastname" placeholder="Фамилия" id="lastname" required>
+        <form action="" id="registrationForm" method="post">
+            <input type="text" name="name" placeholder="Имя" id="firstName" required>
+            <input type="text" name="lastname" placeholder="Фамилия" id="lastName" required>
             <input type="email" name="email" placeholder="Email" id="email" required>
             <input type="tel" name="phone" placeholder="Телефон" id="phone" required>
             <button type="submit">Отправить</button>
@@ -1300,4 +1297,6 @@
 <script src="script.js"></script>
 <?php include '../api/integration/php_var_adapter.php'; ?>
 <?php include '../api/integration/o-undeground.php'; ?>
-</body></html>
+</body>
+
+</html>
