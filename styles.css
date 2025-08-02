@@ -1,0 +1,296 @@
+:root {
+  --input-c1: #1fa038;
+  --input-c2: #008018;
+  --input-c3: #b51a10;
+  --input-c4: rgb(104, 61, 214);
+  --input-c5: #fff
+  --anim-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+#toast-container > .toast {
+  z-index: 9999 !important; /* Устанавливаем высокий z-index */
+}
+
+
+#rgbtm {
+  /* max-width: 358px; */
+  width: 100%;
+  padding: 10px;
+  background-color: var(--input-c2);
+  border-color: #ffdd2d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #158f2c;
+}
+
+.register-btn {
+  color: #000;
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid #b7cef5;
+  align-items: center;
+  justify-content: center;
+  background-color: #9899af !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Плавный переход цветов */
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px 10px rgba(0, 255, 0, 0);
+  }
+  100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
+/* Стиль для кнопки, которая НЕ имеет атрибут disabled */
+.register-btn:not([disabled]) {
+  background-color: #28a745 !important; /* Зеленый цвет */
+  border-color: #28a745;
+  animation: pulse 1.5s infinite; /* Анимация пульсации */
+}
+
+
+#rgbtm:focus {
+  color: white;
+  border-color: #369200;
+  background-color: #045a00;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 6px 0px rgb(5 103 0 / 75%);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+#rgbtm:hover {
+  color: white;
+  border-color: #369200;
+  background-color: #045a00;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 6px 0px rgb(5 103 0 / 75%);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.registrationFormdisplay * {
+  /* z-index: 3; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-form {
+  position: absolute;
+  z-index: 3;
+  top: 50%; /* Позиционирование от верхнего края страницы */
+  left: 50%; /* Позиционирование от левого края страницы */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Сдвигаем форму на 50% ее ширины и высоты назад, чтобы центр формы совпал с центром экрана */
+}
+
+.registrationFormdisplay h3 {
+  color: var(--header-c1);
+  text-align: center;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  white-space: pre-line;
+}
+.modal-form-group {
+  position: relative;
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: fill var(--anim-slow);
+  pointer-events: none;
+}
+@media screen and (max-width: 800px) {
+  * {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 390px) {
+  h3 {
+    white-space: normal;
+  }
+  form {
+    /* min-width: auto !important; */
+  }
+}
+
+.suggestion {
+  color: #007bff; /* Синий цвет, аналогичный стандартным гиперссылкам */
+  cursor: n-resize; /* Курсор в виде руки, указывающий на интерактивность */
+  text-decoration: underline; /* Подчеркивание для подчеркивания гиперссылки */
+  padding: 1px; /* Небольшой отступ вокруг текста */
+  border-radius: 5px; /* Скругленные углы для эстетической привлекательности */
+}
+
+.suggestion:hover {
+  background-color: #e9ecef; /* Светло-серый фон при наведении */
+  text-decoration: none; /* Убрать подчеркивание при наведении */
+}
+
+
+.form-header {
+  max-width: 169px;
+  color: #000;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  display: flex;
+  width: 100% !important;
+  padding: 14px 14px;
+  background-color: rgb(0 0 0 / 5%);
+  margin-bottom: 10px;
+  border: 1px solid #404040;
+  color: black !important;
+  border-radius: 20px;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
+  transition: outline-color var(--anim-slow);
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline-color: var(--input-c1);
+}
+
+/* label {
+  font-size: 13px;
+} */
+
+.error-msg {
+  color: red;
+  font-size: 10px; /* Унифицируем размер шрифта для всех сообщений об ошибках */
+  margin-bottom: 0px;
+  margin-top: 4px;
+  min-height: 20px;
+  visibility: hidden; /* По умолчанию скрыть все сообщения об ошибках */
+}
+
+.form-input.invalid + .error-msg,
+.phone.invalid + .error-msg {
+  visibility: visible; /* Показываем сообщения об ошибках только если поле невалидно */
+}
+
+
+.valid {
+  background-color: #e0f8d8 !important;
+}
+
+
+.invalid {
+  background-color: #fe1b1b52 !important;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+.rf-form-button:not(:disabled) {
+  animation: pulse 1.5s infinite;
+}
+
+
+.rf-form-input{
+  background: linear-gradient(176deg, rgba(51, 51, 51, 0.4) 0%, rgba(80, 79, 79, 0.4) 100%);
+font-size: 20px;
+  /* backdrop-filter: blur(5px); */
+}
+
+
+
+
+
+input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+  background-color: #fafafa;
+  color: #333;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+  border-color: #018562;
+  
+}
+
+/* label {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  color: #777;
+  transition: all 0.3s;
+  pointer-events: none;
+  background: transparent;
+  padding: 0 5px;
+} */
+
+input[type="text"]:focus + label, input[type="email"]:focus + label, input[type="tel"]:focus + label,
+input[type="text"]:not(:placeholder-shown) + label, input[type="email"]:not(:placeholder-shown) + label, input[type="tel"]:not(:placeholder-shown) + label {
+  top: -12px;
+  color: #018562;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff;
+}
+
+.iti--allow-dropdown {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .iti__dropdown-content {
+    height: 86vh;
+    top: 50px;
+  }
+}
+
+div:where(.swal2-container) .swal2-html-container {
+  overflow:visible !important;
+  z-index: 1000 !important;
+}
